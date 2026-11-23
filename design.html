@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The World — 23 November 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1024px; height: 1024px; overflow: hidden; }
+  body {
+    background: #0a1020;
+    color: #f4f7fb;
+    font-family: "DejaVu Sans", Arial, sans-serif;
+    position: relative;
+  }
+  .bg-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .glow { position: absolute; border-radius: 50%; filter: blur(2px); }
+  .glow-a { left: -120px; top: -140px; width: 480px; height: 480px; background: radial-gradient(circle, rgba(31,92,160,.28), transparent 70%); }
+  .glow-b { right: -160px; top: 340px; width: 520px; height: 520px; background: radial-gradient(circle, rgba(180,60,50,.16), transparent 70%); }
+  .masthead { position: absolute; left: 28px; top: 24px; width: 968px; height: 132px; }
+  .brand { position: absolute; left: 0; top: 0; font-size: 76px; font-weight: 900; letter-spacing: -3px; line-height: 1; }
+  .brand em { color: #ff5a4f; font-style: normal; }
+  .datebox { position: absolute; right: 0; top: 6px; width: 330px; text-align: right; }
+  .datebox .d1 { font-size: 21px; letter-spacing: 4px; color: #8fa4c4; font-weight: 700; }
+  .datebox .d2 { font-size: 34px; font-weight: 800; letter-spacing: -1px; margin-top: 4px; }
+  .rule { position: absolute; left: 28px; top: 164px; width: 968px; height: 4px; background: linear-gradient(90deg, #ff5a4f 0 190px, #f5b83d 190px 380px, #3aa0d8 380px 570px, #5bd09a 570px 760px, #8b74e6 760px 968px); }
+  .kicker { position: absolute; left: 28px; top: 174px; width: 968px; font-size: 15px; letter-spacing: 3px; color: #9db0cc; }
+  .card {
+    position: absolute; border-radius: 10px; overflow: hidden;
+    background: #121b2e; border: 1px solid #273552;
+    padding: 16px 18px;
+  }
+  .card .tag {
+    display: inline-block; font-size: 13px; font-weight: 800; letter-spacing: 2px;
+    color: #08101e; padding: 3px 8px; border-radius: 3px; margin-bottom: 8px;
+  }
+  .tag.climate { background: #5bd09a; } .tag.mideast { background: #ff8a5b; }
+  .tag.us { background: #7fb4ff; } .tag.europe { background: #c3a2ff; }
+  .tag.asia { background: #ffd166; } .tag.africa { background: #ff7f9e; }
+  .tag.tech { background: #67d5e8; }
+  .head { font-weight: 800; line-height: 1.06; letter-spacing: -.6px; }
+  .body { color: #b9c7dc; line-height: 1.32; margin-top: 8px; }
+  .art { position: absolute; opacity: .95; }
+  /* Hero: climate */
+  #hero { left: 28px; top: 204px; width: 572px; height: 384px; background: linear-gradient(135deg, #122437 0%, #132032 100%); }
+  #hero .head { font-size: 46px; width: 480px; }
+  #hero .body { font-size: 17px; width: 470px; }
+  /* right column */
+  #iran { left: 618px; top: 204px; width: 378px; height: 186px; }
+  #iran .head { font-size: 31px; width: 250px; }
+  #iran .body { font-size: 14px; width: 240px; }
+  #us { left: 618px; top: 402px; width: 378px; height: 186px; }
+  #us .head { font-size: 31px; width: 250px; }
+  #us .body { font-size: 14px; width: 250px; }
+  /* bottom row */
+  #ukraine { left: 28px; top: 606px; width: 312px; height: 286px; }
+  #indonesia { left: 356px; top: 606px; width: 312px; height: 286px; }
+  #nigeria { left: 684px; top: 606px; width: 312px; height: 286px; }
+  #ukraine .head, #indonesia .head, #nigeria .head { font-size: 27px; width: 280px; }
+  #ukraine .body, #indonesia .body, #nigeria .body { font-size: 15px; width: 278px; }
+  .art-bottom { right: 10px; bottom: 8px; }
+  /* footer strip */
+  #footer { position: absolute; left: 28px; top: 908px; width: 968px; height: 88px; }
+  .mini { position: absolute; top: 0; width: 470px; height: 88px; border-radius: 8px; background: #111a2b; border: 1px solid #273552; padding: 10px 12px; }
+  #m1 { left: 0; } #m2 { left: 498px; }
+  .mini .mt { font-size: 20px; font-weight: 800; }
+  .mini .mb { font-size: 14px; color: #a9bad2; margin-top: 3px; }
+  .stamp { position: absolute; right: 18px; bottom: 14px; transform: rotate(-9deg); border: 3px solid #ff5a4f; color: #ff5a4f; font-size: 26px; font-weight: 900; letter-spacing: 2px; padding: 5px 12px; border-radius: 6px; opacity: .85; }
+  .datefoot { position: absolute; left: 28px; top: 1000px; width: 968px; font-size: 13px; color: #6d82a3; letter-spacing: 1px; }
+</style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+
+  <div class="masthead">
+    <div class="brand">THE <em>WORLD</em></div>
+    <div class="datebox">
+      <div class="d1">MONDAY · DAILY BRIEF</div>
+      <div class="d2">23 NOVEMBER 2026</div>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="kicker">THE DAY'S NEWS IN ONE PICTURE · CLIMATE, WAR, POLITICS AND DISASTER</div>
+
+  <div class="card" id="hero">
+    <span class="tag climate">CLIMATE · ANTALYA</span>
+    <div class="head">COP31 ENDS<br>WITHOUT A DEAL</div>
+    <div class="body">Nearly 200 nations ran 49 hours past the deadline. The EU rejected the last text as oil states blocked any mention of fossil fuels — the longest climate summit on record, and the first to collapse without a final agreement in 17 years.</div>
+    <svg class="art" style="right:8px;bottom:4px" width="150" height="150" viewBox="0 0 150 150">
+      <circle cx="75" cy="75" r="56" fill="#173d3a" stroke="#5bd09a" stroke-width="3"/>
+      <path d="M25 60 Q75 30 125 60 M25 90 Q75 120 125 90 M75 20 Q55 75 75 130 M75 20 Q95 75 75 130" fill="none" stroke="#5bd09a" stroke-width="1.6" opacity=".7"/>
+      <path d="M18 78 L55 66 L72 88 L104 62 L134 74" fill="none" stroke="#ff5a4f" stroke-width="6"/>
+      <rect x="14" y="126" width="122" height="8" rx="4" fill="#ff5a4f" opacity=".55"/>
+    </svg>
+    <div class="stamp">NO DEAL</div>
+  </div>
+
+  <div class="card" id="iran">
+    <span class="tag mideast">MIDDLE EAST</span>
+    <div class="head">IRAN STRIKES BAHRAIN</div>
+    <div class="body">Missiles hit US bases; tankers struck in Hormuz. Trump warns of new strikes after the New Year.</div>
+    <svg class="art" style="right:4px;bottom:2px" width="108" height="96" viewBox="0 0 108 96">
+      <path d="M0 70 Q54 52 108 70 L108 96 L0 96 Z" fill="#2b3a52"/>
+      <path d="M22 68 L48 20 L56 20 L34 68 Z" fill="#ff8a5b"/>
+      <circle cx="52" cy="14" r="7" fill="#ffd166"/>
+      <path d="M52 22 L60 40 L44 40 Z" fill="#ff5a4f"/>
+      <path d="M70 60 L84 46 M78 66 L94 52" stroke="#ff8a5b" stroke-width="3"/>
+    </svg>
+  </div>
+
+  <div class="card" id="us">
+    <span class="tag us">UNITED STATES</span>
+    <div class="head">DEMS TAKE THE HOUSE</div>
+    <div class="body">A 258-seat majority, the largest since 1992. Jeffries set to be the first Black Speaker.</div>
+    <svg class="art" style="right:6px;bottom:2px" width="104" height="96" viewBox="0 0 104 96">
+      <rect x="6" y="40" width="92" height="8" fill="#7fb4ff"/>
+      <rect x="10" y="48" width="84" height="34" fill="#243454"/>
+      <g fill="#7fb4ff"><rect x="16" y="50" width="8" height="30"/><rect x="32" y="50" width="8" height="30"/><rect x="48" y="50" width="8" height="30"/><rect x="64" y="50" width="8" height="30"/><rect x="80" y="50" width="8" height="30"/></g>
+      <polygon points="52,10 90,34 14,34" fill="#7fb4ff" opacity=".85"/>
+      <rect x="46" y="36" width="12" height="16" fill="#dbe8ff"/>
+    </svg>
+  </div>
+
+  <div class="card" id="ukraine">
+    <span class="tag europe">EUROPE</span>
+    <div class="head">POLAND HIT BY RUSSIAN MISSILES</div>
+    <div class="body">Three X-101 missiles crossed Polish airspace; NATO vowed to defend every centimetre of its territory. Russia also struck bridges in Kyiv.</div>
+    <svg class="art art-bottom" width="112" height="86" viewBox="0 0 112 86">
+      <path d="M2 60 L110 60" stroke="#c3a2ff" stroke-width="7"/>
+      <path d="M28 60 L28 26 M84 60 L84 26" stroke="#c3a2ff" stroke-width="5"/>
+      <path d="M28 26 Q56 6 84 26" fill="none" stroke="#c3a2ff" stroke-width="5"/>
+      <path d="M56 20 L60 34 L48 33 Z" fill="#ff5a4f"/>
+      <path d="M20 76 L96 76" stroke="#ff5a4f" stroke-width="3" stroke-dasharray="6 5"/>
+    </svg>
+  </div>
+
+  <div class="card" id="indonesia">
+    <span class="tag asia">INDONESIA</span>
+    <div class="head">CANDY FACTORY FIRE: 24 DEAD</div>
+    <div class="body">A blaze at a confectionery plant near Jakarta killed 24; rescuers searched for more than 30 missing workers as the roof collapsed.</div>
+    <svg class="art art-bottom" width="112" height="86" viewBox="0 0 112 86">
+      <rect x="10" y="34" width="92" height="48" fill="#4a3a24" stroke="#ffd166" stroke-width="2"/>
+      <g fill="#ffd166" opacity=".8"><rect x="20" y="46" width="14" height="14"/><rect x="46" y="46" width="14" height="14"/><rect x="72" y="46" width="14" height="14"/></g>
+      <path d="M25 34 Q16 20 30 10 Q28 24 40 28 Q48 14 60 6 Q58 26 74 32" fill="#ff8a5b" opacity=".9"/>
+      <path d="M74 82 L74 34 M56 82 L56 34" stroke="#ffd166" stroke-width="2" opacity=".6"/>
+    </svg>
+  </div>
+
+  <div class="card" id="nigeria">
+    <span class="tag africa">NIGERIA</span>
+    <div class="head">FUNERAL BOAT CAPSIZES: 24 DEAD</div>
+    <div class="body">A boat carrying mourners overturned on a river journey; at least 24 people died, according to local officials.</div>
+    <svg class="art art-bottom" width="112" height="86" viewBox="0 0 112 86">
+      <path d="M2 66 Q28 56 56 66 T110 66 L110 86 L2 86 Z" fill="#1d4a6b"/>
+      <path d="M20 52 L84 44 L72 62 L32 62 Z" fill="#ff7f9e"/>
+      <path d="M52 44 L52 14 L78 34 Z" fill="#ffd166"/>
+      <circle cx="38" cy="70" r="5" fill="#ff7f9e"/><circle cx="88" cy="74" r="4" fill="#ff7f9e"/>
+    </svg>
+  </div>
+
+  <div id="footer">
+    <div class="mini" id="m1">
+      <span class="tag tech" style="font-size:11px">TECH</span>
+      <div class="mt">AI CHIP SMUGGLING PROBE</div>
+      <div class="mb">US investigators examine Nvidia export controls as China vows countermeasures.</div>
+    </div>
+    <div class="mini" id="m2">
+      <span class="tag europe" style="font-size:11px">PORTUGAL</span>
+      <div class="mt">LISBON COST-OF-LIVING MARCH</div>
+      <div class="mb">Thousands take to the streets as housing and food prices keep rising.</div>
+    </div>
+  </div>
+  <div class="datefoot">THE WORLD · MONDAY 23 NOVEMBER 2026 · ONE DAY, ONE IMAGE</div>
+</body>
+</html>
